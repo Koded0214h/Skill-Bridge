@@ -1,0 +1,108 @@
+.register-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.register-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(0, 255, 128, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(0, 255, 128, 0.1) 0%, transparent 50%);
+    z-index: 0;
+}
+
+.register-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.register-header h1 {
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(0, 255, 128, 0.3);
+}
+
+.register-header p {
+    color: var(--muted-text);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.register-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-info {
+    flex: 1;
+    padding: 2rem;
+    background: var(--secondary-bg);
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 255, 128, 0.1);
+}
+
+.register-info h2 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.register-info p {
+    color: var(--muted-text);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.register-features {
+    margin-top: 2rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.feature-item::before {
+    content: '✓';
+    color: var(--accent-color);
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .register-content {
+        flex-direction: column;
+    }
+
+    .register-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .register-info {
+        width: 100%;
+    }
+} 

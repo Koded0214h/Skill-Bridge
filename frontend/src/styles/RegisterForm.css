@@ -1,0 +1,179 @@
+.register-form-container {
+    flex: 1.2;
+    min-width: 450px;
+    max-width: 900px;
+    padding: 2rem;
+    background: var(--secondary-bg);
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 255, 128, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.register-form {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #1a1b2e;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 128, 0.1);
+    color: #fff;
+}
+
+.register-form h1 {
+    text-align: center;
+    color: #00ff80;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px rgba(0, 255, 128, 0.3);
+}
+
+.form-control {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #00ff80;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-control input,
+.form-control select {
+    width: 100%;
+    padding: 12px;
+    background: #2a2b3e;
+    border: 2px solid #3a3b4e;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control input:focus,
+.form-control select:focus {
+    outline: none;
+    border-color: #00ff80;
+    box-shadow: 0 0 10px rgba(0, 255, 128, 0.2);
+}
+
+.form-control input::placeholder {
+    color: #6b6b7a;
+}
+
+.form-control .error {
+    color: #ff4d4d;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    text-shadow: 0 0 5px rgba(255, 77, 77, 0.3);
+}
+
+.role-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300ff80' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+    padding-right: 2.5rem;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #00ff80;
+    color: #1a1b2e;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background: #00cc66;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 128, 0.3);
+}
+
+button:disabled {
+    background: #2a2b3e;
+    color: #6b6b7a;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+p {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #6b6b7a;
+}
+
+p a {
+    color: #00ff80;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+p a:hover {
+    color: #00cc66;
+    text-shadow: 0 0 10px rgba(0, 255, 128, 0.3);
+}
+
+/* Status messages */
+.status-messages {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.status-messages .loading {
+    color: #00ff80;
+    animation: pulse 1.5s infinite;
+}
+
+.status-messages .error {
+    color: #ff4d4d;
+    text-shadow: 0 0 5px rgba(255, 77, 77, 0.3);
+}
+
+.status-messages .success {
+    color: #00ff80;
+    text-shadow: 0 0 5px rgba(0, 255, 128, 0.3);
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .register-form-container {
+        min-width: 100%;
+        padding: 1.5rem;
+    }
+
+    .register-form {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .register-form h1 {
+        font-size: 2rem;
+    }
+} 
